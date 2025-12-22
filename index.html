@@ -10,8 +10,9 @@
         :root {
             --primary-dark: #1B1E2F;
             --secondary-dark: #242F49;
-            --accent-coral: #FFA586;
+            --accent-coral: #FF6B6B; /* Changed from #FFA586 to light red #FF6B6B */
             --bold-red: #FF4E45;
+            --light-red: #FF6B6B; /* Added light red variable */
             --light-gray: #F5F7FA;
             --white: #FFFFFF;
             --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
@@ -104,7 +105,7 @@
 
         .btn-primary:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 25px rgba(255, 165, 134, 0.3);
+            box-shadow: 0 15px 25px rgba(255, 107, 107, 0.3); /* Updated to light red */
         }
 
         .btn-secondary {
@@ -142,6 +143,7 @@
             align-items: center;
         }
 
+        /* Logo Styles */
         .logo {
             display: flex;
             align-items: center;
@@ -157,13 +159,11 @@
             transform: scale(1.05);
         }
 
+        /* Fallback text logo */
         .logo-text {
             font-size: 1.8rem;
             font-weight: 800;
-        }
-
-        .logo-text span {
-            color: var(--accent-coral);
+            color: var(--accent-coral); /* Light red color */
         }
 
         .nav-menu {
@@ -232,12 +232,12 @@
         }
 
         .hero h1 span {
-            color: var(--accent-coral);
+            color: var(--accent-coral); /* Light red color */
         }
 
         .hero-tagline {
             font-size: 1.8rem;
-            color: var(--accent-coral);
+            color: var(--accent-coral); /* Light red color */
             margin-bottom: 20px;
             font-weight: 600;
         }
@@ -320,7 +320,7 @@
         .orb-2 {
             width: 300px;
             height: 300px;
-            background: radial-gradient(circle, var(--accent-coral), transparent 70%);
+            background: radial-gradient(circle, var(--accent-coral), transparent 70%); /* Light red */
             bottom: 10%;
             left: 10%;
             animation: float 18s infinite ease-in-out reverse;
@@ -329,7 +329,7 @@
         .orb-3 {
             width: 200px;
             height: 200px;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.5), transparent 70%);
+            background: radial-gradient(circle, rgba(255, 107, 107, 0.5), transparent 70%); /* Light red */
             top: 40%;
             left: 5%;
             animation: float 12s infinite ease-in-out;
@@ -380,7 +380,7 @@
         .feature-card:hover {
             transform: translateY(-10px);
             background-color: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 165, 134, 0.2);
+            border-color: rgba(255, 107, 107, 0.2); /* Light red */
             box-shadow: var(--shadow-hover);
         }
 
@@ -431,7 +431,7 @@
         .phase-card:hover {
             transform: translateY(-10px);
             background-color: rgba(255, 255, 255, 0.08);
-            border-color: rgba(255, 165, 134, 0.2);
+            border-color: rgba(255, 107, 107, 0.2); /* Light red */
             box-shadow: var(--shadow-hover);
         }
 
@@ -453,7 +453,7 @@
         .phase-icon {
             width: 80px;
             height: 80px;
-            background-color: rgba(255, 165, 134, 0.1);
+            background-color: rgba(255, 107, 107, 0.1); /* Light red */
             border-radius: 20px;
             display: flex;
             align-items: center;
@@ -469,7 +469,7 @@
 
         .phase-subtitle {
             font-size: 1.2rem;
-            color: var(--accent-coral);
+            color: var(--accent-coral); /* Light red */
             margin-bottom: 20px;
             font-weight: 600;
         }
@@ -502,27 +502,29 @@
         .partner-card:hover {
             transform: translateY(-10px);
             background-color: rgba(255, 255, 255, 0.08);
-            border-color: rgba(255, 165, 134, 0.2);
+            border-color: rgba(255, 107, 107, 0.2); /* Light red */
             box-shadow: var(--shadow-hover);
         }
 
-        .partner-logo {
-            width: 200px;
-            height: 100px;
-            background-color: var(--white);
-            border-radius: 12px;
+        .partner-logo-container {
+            width: 300px;
+            height: 150px;
             margin-bottom: 30px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
-            font-weight: 800;
-            color: var(--primary-dark);
+        }
+
+        .partner-logo {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
         }
 
         .partner-name {
             font-size: 2.5rem;
             margin-bottom: 20px;
+            color: var(--accent-coral); /* Light red */
         }
 
         .partner-desc {
@@ -532,7 +534,7 @@
         }
 
         .partner-highlight {
-            color: var(--accent-coral);
+            color: var(--accent-coral); /* Light red */
             font-weight: 600;
         }
 
@@ -560,7 +562,7 @@
         .instructions-title {
             font-size: 1.3rem;
             margin-bottom: 20px;
-            color: var(--accent-coral);
+            color: var(--accent-coral); /* Light red */
         }
 
         .instructions-list {
@@ -578,7 +580,7 @@
             content: '✓';
             position: absolute;
             left: 0;
-            color: var(--accent-coral);
+            color: var(--accent-coral); /* Light red */
             font-weight: bold;
         }
 
@@ -587,7 +589,7 @@
             border-radius: var(--border-radius);
             padding: 40px;
             margin-bottom: 40px;
-            border: 2px dashed rgba(255, 165, 134, 0.3);
+            border: 2px dashed rgba(255, 107, 107, 0.3); /* Light red */
         }
 
         .form-link-title {
@@ -602,13 +604,13 @@
             padding: 20px;
             margin-bottom: 30px;
             word-break: break-all;
-            color: var(--accent-coral);
+            color: var(--accent-coral); /* Light red */
             font-weight: 500;
             transition: var(--transition);
         }
 
         .form-link:hover {
-            background-color: rgba(255, 165, 134, 0.1);
+            background-color: rgba(255, 107, 107, 0.1); /* Light red */
         }
 
         .registration-note {
@@ -652,7 +654,7 @@
         }
 
         .social-icon:hover {
-            background-color: var(--accent-coral);
+            background-color: var(--accent-coral); /* Light red */
             transform: translateY(-5px);
         }
 
@@ -694,6 +696,11 @@
             
             .partner-name {
                 font-size: 2rem;
+            }
+            
+            .partner-logo-container {
+                width: 250px;
+                height: 125px;
             }
         }
 
@@ -748,6 +755,11 @@
                 gap: 30px;
                 text-align: center;
             }
+            
+            .partner-logo-container {
+                width: 200px;
+                height: 100px;
+            }
         }
 
         @media screen and (max-width: 576px) {
@@ -787,6 +799,15 @@
             .footer-logo img {
                 height: 40px;
             }
+            
+            .partner-logo-container {
+                width: 180px;
+                height: 90px;
+            }
+            
+            .partner-name {
+                font-size: 1.8rem;
+            }
         }
     </style>
 </head>
@@ -795,9 +816,11 @@
     <header id="header">
         <div class="container">
             <nav class="navbar">
-                <!-- LOGO - Will show placeholder first -->
+                <!-- LOGO - Using Picture1.png -->
                 <a href="#home" class="logo">
-                    <img src="https://via.placeholder.com/200x60/1B1E2F/FFA586?text=BrainLink+Logo" alt="BrainLink Competition">
+                    <img src="Picture1.png" alt="BrainLink Competition" onerror="this.style.display='none'; document.querySelector('.logo-text').style.display='block';">
+                    <!-- Text fallback -->
+                    <div class="logo-text" style="display: none;">BrainLink</div>
                 </a>
                 
                 <ul class="nav-menu">
@@ -843,7 +866,7 @@
             </div>
         </div>
         
-        <!-- 3D Glowing Orbs -->
+        <!-- 3D Glowing Elements -->
         <div class="glowing-orb orb-1"></div>
         <div class="glowing-orb orb-2"></div>
         <div class="glowing-orb orb-3"></div>
@@ -942,8 +965,9 @@
             <p class="section-subtitle">BrainLink is proud to partner with industry leaders who provide real-world challenges and mentorship.</p>
             
             <div class="partner-card">
-                <div class="partner-logo">
-                    HENKEL
+                <!-- Henkel Logo using 1200px-Henkel-Logo.svg.png -->
+                <div class="partner-logo-container">
+                    <img src="1200px-Henkel-Logo.svg.png" alt="Henkel Algeria" class="partner-logo">
                 </div>
                 <h3 class="partner-name">Henkel Algeria</h3>
                 <p class="partner-desc">Henkel operates worldwide with leading brands and technologies in three business areas: Laundry & Home Care, Beauty Care, and Adhesive Technologies. Founded in 1876, Henkel looks back on more than 140 years of success.</p>
@@ -991,9 +1015,9 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <!-- Footer Logo -->
+                <!-- Footer Logo - Using same Picture1.png -->
                 <a href="#home" class="footer-logo">
-                    <img src="https://via.placeholder.com/250x80/151722/FFA586?text=BrainLink+Logo" alt="BrainLink Competition">
+                    <img src="Picture1.png" alt="BrainLink Competition">
                 </a>
                 
                 <div class="footer-social">
@@ -1096,21 +1120,4 @@
             });
         });
         
-        // Hide scroll indicator after scrolling
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                scrollIndicator.style.opacity = '0';
-                scrollIndicator.style.visibility = 'hidden';
-            } else {
-                scrollIndicator.style.opacity = '1';
-                scrollIndicator.style.visibility = 'visible';
-            }
-        });
-        
-        // Initialize page with header scrolled if not at top
-        if (window.scrollY > 50) {
-            document.getElementById('header').classList.add('scrolled');
-        }
-    </script>
-</body>
-</html>
+        // Hide scroll indicator after
